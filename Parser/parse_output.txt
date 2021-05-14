@@ -1,0 +1,233 @@
+Probability of the most probable parse tree for the sentence:
+The government is claiming success in political campaigns .
+
+is 4.968192749918396e-34
+
+S
+	NP-SBJ
+		DT	The
+		NN	government
+	S|<VP-.>
+		VP
+			VBZ	is
+			NP-PRD
+				NP
+					VBG	claiming
+					NN	success
+				PP
+					IN	in
+					NP
+						JJ	political
+						NNS	campaigns
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+She is the most important person for this task .
+
+is 1.3939768582563558e-32
+
+S
+	NP-SBJ+PRP	She
+	S|<VP-.>
+		VP
+			VBZ	is
+			NP-PRD
+				NP
+					DT	the
+					NP|<ADJP-NN>
+						ADJP
+							RBS	most
+							JJ	important
+						NN	person
+				PP
+					IN	for
+					NP
+						DT	this
+						NN	task
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+This is the best place in the world .
+
+is 1.1489194886425874e-29
+
+S
+	NP-SBJ+DT	This
+	S|<VP-.>
+		VP
+			VBZ	is
+			NP-PRD
+				NP
+					DT	the
+					NP|<JJS-NN>
+						JJS	best
+						NN	place
+				PP
+					IN	in
+					NP
+						DT	the
+						NN	world
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+There was nothing for us at the apartment .
+
+is 2.86964812135485e-28
+
+S
+	NP-SBJ+EX	There
+	S|<VP-.>
+		VP
+			VBD	was
+			VP|<NP-PP-CLR>
+				NP
+					NP+NN	nothing
+					PP
+						IN	for
+						NP+PRP	us
+				PP-CLR
+					IN	at
+					NP
+						DT	the
+						NN	apartment
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+You will have to come to this place .
+
+is 1.9179022877797767e-27
+
+S
+	NP-SBJ+PRP	You
+	S|<VP-.>
+		VP
+			MD	will
+			VP
+				VBP	have
+				VP
+					TO	to
+					VP
+						VB	come
+						PP-CLR
+							IN	to
+							NP
+								DT	this
+								NN	place
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+The new department makes automation software .
+
+is 1.9606685492896344e-24
+
+S
+	NP-SBJ
+		DT	The
+		NP-SBJ|<JJ-NN>
+			JJ	new
+			NN	department
+	S|<VP-.>
+		VP
+			VBZ	makes
+			NP
+				NN	automation
+				NN	software
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+Japanese investment is propelling the region .
+
+is 1.8189381615384736e-23
+
+S
+	NP-SBJ
+		JJ	Japanese
+		NN	investment
+	S|<VP-.>
+		VP
+			VBZ	is
+			VP
+				VBG	propelling
+				NP
+					DT	the
+					NN	region
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+It is not her mistake because she was not involved in this .
+
+is 5.017881707695733e-41
+
+S
+	NP-SBJ+PRP	It
+	VP
+		VBZ	is
+		VP|<RB-NP-PRD>
+			RB	not
+			NP-PRD
+				NP
+					PRP$	her
+					NN	mistake
+				SBAR
+					IN	because
+					S
+						NP-SBJ+PRP	she
+						S|<VP-.>
+							VP
+								VBD	was
+								VP|<RB-VP>
+									RB	not
+									VP
+										VBN	involved
+										PP-CLR
+											IN	in
+											NP+DT	this
+							.	.
+
+Probability of the most probable parse tree for the sentence:
+I should have visited that place more frequently .
+
+is 1.930696599578797e-27
+
+S
+	NP-SBJ+PRP	I
+	S|<VP-.>
+		VP
+			MD	should
+			VP
+				VBP	have
+				VP
+					VBD	visited
+					VP|<PP-LOC-ADVP-TMP>
+						PP-LOC
+							IN	that
+							NP+NN	place
+						ADVP-TMP
+							RBR	more
+							RB	frequently
+		.	.
+
+Probability of the most probable parse tree for the sentence:
+His problem is not related to this specific incident .
+is 2.559842219479272e-34
+
+S
+	NP-SBJ
+		PRP$	His
+		NN	problem
+	S|<VP-.>
+		VP
+			VBZ	is
+			ADJP-PRD
+				RB	not
+				ADJP-PRD|<JJ-PP>
+					JJ	related
+					PP
+						IN	to
+						NP
+							DT	this
+							NP|<JJ-NN>
+								JJ	specific
+								NN	incident
+		.	.
+

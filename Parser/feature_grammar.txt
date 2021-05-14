@@ -1,0 +1,40 @@
+- This is a CNF grammar including feature structures.
+- For agreement, PER (person), NUM (number), and TENSE have been considered.
+- Non terminal TV stands for Transitive Verbs, and IV for Intransitive Verbs
+- In the convention of NLTK's FeatStruct:
+    - ?x denotes some variable value which would be filled during unification
+    - For example in the rule NP[NUM=?n, PER=?p] -> Det[NUM=?n] N[NUM=?n, PER=?p],
+        The NUM value (?n) should match for Det and N, and that same value is for NP.
+        Similarly, PER value (?p) for NP should be same as that for N. 
+- If while parsing, unification fails, parser stops and no parse trees are generated.
+- For a correct sentence like "Josh likes these children .", parse trees are generated,
+but it fails for sentences like "Josh likes these child ." or "Josh like these children ."
+
+S -> N[NUM=?n, PER=?p] VP[NUM=?n, PER=?p]
+S -> PropN[NUM=?n, PER=?p] VP[NUM=?n, PER=?p]
+S -> NP[NUM=?n, PER=?p] VP[NUM=?n, PER=?p]
+NP[NUM=?n, PER=?p] -> Det[NUM=?n] N[NUM=?n, PER=?p]
+VP[TENSE=?t, NUM=?n, PER=?p] -> IV[TENSE=?t, NUM=?n, PER=?p] Dot
+VP[TENSE=?t, NUM=?n, PER=?p] -> TVPar[TENSE=?t, NUM=?n, PER=?p] Dot
+TVPar[TENSE=?t, NUM=?n, PER=?p] -> TV[TENSE=?t, NUM=?n, PER=?p] NP
+TVPar[TENSE=?t, NUM=?n, PER=?p] -> TV[TENSE=?t, NUM=?n, PER=?p] N
+Dot -> '.'
+Det[NUM=sg] -> 'this' | 'every'
+Det[NUM=pl] -> 'these' | 'all'
+Det -> 'the' | 'some' | 'several'
+PropN[NUM=sg, PER=3]-> 'Josh' | 'Swain'
+N[NUM=sg, PER=3] -> 'dog' | 'girl' | 'car' | 'child'
+N[NUM=pl, PER=3] -> 'dogs' | 'girls' | 'cars' | 'children'
+N[NUM=sg, PER=1] -> 'I'
+N[NUM=pl, PER=1] -> 'we'
+N[PER=2] -> 'you'
+IV[TENSE=pres,  NUM=sg, PER=3] -> 'disappears' | 'walks'
+TV[TENSE=pres, NUM=sg, PER=3] -> 'sees' | 'likes'
+IV[TENSE=pres,  NUM=pl, PER=3] -> 'disappear' | 'walk'
+TV[TENSE=pres, NUM=pl, PER=3] -> 'see' | 'like'
+IV[TENSE=pres, PER=1] -> 'disappear' | 'walk'
+TV[TENSE=pres, PER=1] -> 'see' | 'like'
+IV[TENSE=pres, PER=2] -> 'disappear' | 'walk'
+TV[TENSE=pres, PER=2] -> 'see' | 'like'
+IV[TENSE=past] -> 'disappeared' | 'walked'
+TV[TENSE=past] -> 'saw' | 'liked'
